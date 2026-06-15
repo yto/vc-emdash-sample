@@ -4,6 +4,14 @@
 	"main": "./src/worker.ts",
 	"compatibility_date": "2026-02-24",
 	"compatibility_flags": ["nodejs_compat"],
+	// Keep the *.workers.dev URL alive (admin login / passkey fallback) alongside the custom domain.
+	"workers_dev": true,
+	"routes": [
+		{
+			"pattern": "emdash-sample.vibecodingnotes.com",
+			"custom_domain": true,
+		},
+	],
 	"d1_databases": [
 		{
 			"binding": "DB",
