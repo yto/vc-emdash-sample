@@ -1,5 +1,7 @@
 # EmDash Blog Template (Cloudflare)
 
+> **Note:** このリポジトリは vibecoding の EmDash 解説記事（EMD 記事）の参照実装です。記事で解説している「Astro + EmDash を Cloudflare Workers（D1 + R2）で動かすブログ」を実際に動く形で再現したものです。本番デモ: <https://my-emdash-site.tatsuo-8d3.workers.dev>
+
 A clean, minimal blog built with [EmDash](https://github.com/emdash-cms/emdash) and deployed on Cloudflare Workers with D1 and R2.
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/emdash-cms/templates/tree/main/blog-cloudflare)
