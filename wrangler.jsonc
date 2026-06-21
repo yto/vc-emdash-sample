@@ -4,8 +4,9 @@
 	"main": "./src/worker.ts",
 	"compatibility_date": "2026-02-24",
 	"compatibility_flags": ["nodejs_compat"],
-	// Keep the *.workers.dev URL alive (admin login / passkey fallback) alongside the custom domain.
-	"workers_dev": true,
+	// Admin is accessed only via the custom domain (passkey registered there; Google OAuth as fallback).
+	// The *.workers.dev URL is disabled.
+	"workers_dev": false,
 	"routes": [
 		{
 			"pattern": "emdash-sample.vibecodingnotes.com",
