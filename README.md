@@ -1,7 +1,5 @@
 # EmDash Blog Template (Cloudflare)
 
-> **Note:** このリポジトリは vibecoding の EmDash 解説記事（EMD 記事）の参照実装です。記事で解説している「Astro + EmDash を Cloudflare Workers（D1 + R2）で動かすブログ」を実際に動く形で再現したものです。本番デモ: <https://emdash-sample.vibecodingnotes.com>（Worker 名は `my-emdash-site` だが `workers_dev: false` ＋ 独自ドメインなので workers.dev では開かない）
-
 A clean, minimal blog built with [EmDash](https://github.com/emdash-cms/emdash) and deployed on Cloudflare Workers with D1 and R2.
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/emdash-cms/templates/tree/main/blog-cloudflare)
@@ -17,7 +15,6 @@ A clean, minimal blog built with [EmDash](https://github.com/emdash-cms/emdash) 
 - RSS feed
 - SEO metadata and JSON-LD
 - Dark/light mode
-- Forms plugin and webhook notifier
 
 ## Pages
 
@@ -49,21 +46,23 @@ A clean, minimal blog built with [EmDash](https://github.com/emdash-cms/emdash) 
 ## Local Development
 
 ```bash
-pnpm install
-pnpm bootstrap
-pnpm dev
+npm install
+npm run dev
 ```
+
+Open http://localhost:4321/_emdash/admin and complete the setup wizard. EmDash runs database migrations and applies the blog seed during setup. The site is available at http://localhost:4321.
 
 ## Deploying
 
 ```bash
-pnpm deploy
+npx wrangler login
+npm run deploy
 ```
 
-Or click the deploy button above to set up the project in your Cloudflare account.
+The first deployment provisions the named D1 database and R2 bucket from `wrangler.jsonc`. See [Deploy to Cloudflare](https://docs.emdashcms.com/deployment/cloudflare/) for production setup, or use the deploy button above.
 
 ## See Also
 
 - [Node.js variant](../blog) -- same template using SQLite and local file storage
 - [All templates](../)
-- [EmDash documentation](https://github.com/emdash-cms/emdash/tree/main/docs)
+- [EmDash documentation](https://docs.emdashcms.com/)

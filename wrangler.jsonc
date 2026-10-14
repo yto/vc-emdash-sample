@@ -1,12 +1,11 @@
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "my-emdash-site",
+	"name": "emdash-sample",
 	"main": "./src/worker.ts",
 	"compatibility_date": "2026-02-24",
 	"compatibility_flags": ["nodejs_compat"],
-	// Admin is accessed only via the custom domain (passkey registered there; Google OAuth as fallback).
-	// The *.workers.dev URL is disabled.
 	"workers_dev": false,
+	"preview_urls": false,
 	"routes": [
 		{
 			"pattern": "emdash-sample.vibecodingnotes.com",
@@ -16,19 +15,19 @@
 	"d1_databases": [
 		{
 			"binding": "DB",
-			"database_name": "my-emdash-site",
+			"database_name": "emdash-sample",
 		},
 	],
 	"r2_buckets": [
 		{
 			"binding": "MEDIA",
-			"bucket_name": "my-emdash-media",
+			"bucket_name": "emdash-sample",
 		},
 	],
-	// Worker Loader for plugin sandboxing (disabled for free-tier deployment)
-	// "worker_loaders": [
-	// 	{
-	// 		"binding": "LOADER",
-	// 	},
-	// ],
+	// Sandboxed plugins require Worker Loader, available on Workers paid plans. Uncomment to enable:
+	// "worker_loaders": [{ "binding": "LOADER" }],
+	// General maintenance cron trigger
+	"triggers": {
+		"crons": ["* * * * *"],
+	},
 }

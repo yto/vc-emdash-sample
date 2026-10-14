@@ -8,7 +8,6 @@
     "seed": "seed/seed.json"
   },
   "scripts": {
-    "postinstall": "patch-package",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
@@ -16,20 +15,17 @@
     "typecheck": "astro check"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.5.3",
-    "@astrojs/react": "^5.0.0",
-    "@emdash-cms/cloudflare": "^0.18.0",
-    "@emdash-cms/plugin-forms": "^0.2.3",
-    "@emdash-cms/plugin-webhook-notifier": "^0.2.0",
-    "astro": "^6.3.0",
-    "emdash": "^0.18.0",
+    "@astrojs/cloudflare": "^14.3.1",
+    "@astrojs/react": "^6.0.5",
+    "@emdash-cms/cloudflare": "^1.0.1",
+    "astro": "^7.3.2",
+    "emdash": "^1.0.1",
     "react": "19.2.4",
     "react-dom": "19.2.4"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.7",
-    "@cloudflare/workers-types": "^4.20260305.1",
-    "patch-package": "^8.0.1",
-    "wrangler": "^4.95.0"
+    "@astrojs/check": "^0.9.10",
+    "@cloudflare/workers-types": "^5.20260820.1",
+    "wrangler": "^4.125.0"
   }
 }
