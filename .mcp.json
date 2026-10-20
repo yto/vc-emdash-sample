@@ -1,8 +1,12 @@
 {
-	"mcpServers": {
-		"emdash-docs": {
-			"type": "http",
-			"url": "https://docs.emdashcms.com/mcp"
-		}
-	}
+  "mcpServers": {
+    "emdash-docs": {
+      "type": "http",
+      "url": "https://docs.emdashcms.com/mcp"
+    },
+    "emdash-site": {
+      "type": "http",
+      "url": "https://emdash-sample.vibecodingnotes.com/_emdash/api/mcp"
+    }
+  }
 }
